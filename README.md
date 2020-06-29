@@ -48,11 +48,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between `Relational Databases` and `SQL`.
 
+no difference, SQL uses relational database which allows db tables to be linked together (fixed-Schema) SQL gives the relatinal db the 'CRUD' Abilities. where as non-relational db's used are dynamic in schema, they do not use the table model. Data is stored on a single file.
+
 2. Why do tables need a `primary key`?
+
+Primary Key is used to list items in a column to key a data model organized
 
 3. What is the name given to a table column that references the primary key on another table.
 
+Foreign key
+
 4. What do we need in order to have a _many to many_ relationship between two tables.
+
+you would need a intermediary table; this table will identify many tables in 1 table that can be used as a reference key for many other tables.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
