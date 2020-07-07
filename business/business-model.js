@@ -30,11 +30,12 @@ function addResource(resource) {
 
 // Tasks
 
-function findTasks() {
+function findTasks(projectId) {
   console.log();
-  return db("projects as p")
-    .join("tasks as t", "p.id", "t.project_id")
-    .select("p.project_name", "p.description", "t.completed")
+  return db("Tasks as t")
+    .join("Projects as p", "p.id", "t.project_id")
+    .where("t.project_id", projectId)
+    .select("p.project_name", "p.description as project_description", "t.*")
     .orderBy("p.project_name");
 }
 

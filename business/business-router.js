@@ -48,14 +48,15 @@ router.post("/resources", (req, res) => {
       res.status(201).json(resource);
     })
     .catch((err) => {
+      console.log(err);
       res.status(500).json({ message: "Failed to add new resource" });
     });
 });
 
 // Task CR of CRUD
 
-router.get("/tasks", (req, res) => {
-  Business.findTasks()
+router.get("/tasks/:projectId", (req, res) => {
+  Business.findTasks(req.params.projectId)
     .then((tasks) => {
       res.json(tasks);
     })
